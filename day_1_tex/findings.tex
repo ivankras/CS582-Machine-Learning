@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\title{ML - Day 0 - Findings}
+\author{Iván Krasowski Bissio}
+\date{\small July 19th, 2021}
+
+
+\begin{document}
+\maketitle
+\section*{Kaggle}
+\begin{itemize}
+    \item Kaggle is a platform for Machine Learning competitions!
+    \item \emph{Titanic} and \emph{House Prices} are two proposed competitions for starting.
+\end{itemize}
+\section*{Titanic}
+\begin{itemize}
+    \item \emph{Titanic} competition aims for us to be able to predict whether a person will survive or not the crash.
+    \item Provided data is, for each passenger: PassengerId, Pclass, Name, Sex, Age, SibSp, Parch, Ticket, Fare, Cabin, Embarked
+    \item Expected output is passengerId \(\rightarrow\) survived {0, 1}.
+    \item \emph{train.csv} includes data for training (819 examples); \emph{test.csv} includes data for testing (418 examples).
+    \item \emph{gender\_submission.csv} is an example for the output expected at the competition, except it predicts that all women survive and all men do not.
+\end{itemize}
+\subsection*{Model: Random Forest}
+\begin{itemize}
+    \item The Random Forest classifier can be used from the scikit-learn library (\emph{sklearn.ensemble}).
+    \item Parameters it needs for the prediction: \emph{n\_estimators}, \emph{max\_depth}, \emph{random\_state}.
+    \item It will fit the selected features from the input data (\emph{X}: initially \emph{['Pclass', 'Sex', 'SibSp', 'Parch']}) considering the provided labels "Survived" (\emph{y}).
+    \item Parameters and selected features can be tweaked, trying to improve performance.
+\end{itemize}
+
+\section*{House Prices}
+\begin{itemize}
+    \item TODO (It was too late already)
+\end{itemize}
+
+\end{document}
